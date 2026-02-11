@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dattha Reddy | Software Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#020617;
+  --border:#1e293b;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --accent:#38bdf8;
+  --accent2:#22d3ee;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top,#020617,#000);
+  color:var(--text);
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+  color:var(--accent);
+}
+
+header{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:60px;
+  align-items:center;
+  padding:0 10%;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(56,189,248,0.15),transparent 40%),
+    radial-gradient(circle at 80% 80%,rgba(34,211,238,0.12),transparent 40%);
+}
+
+header h1{
+  font-size:3.2rem;
+  font-weight:800;
+}
+
+header h2{
+  margin-top:12px;
+  font-weight:400;
+  color:var(--muted);
+}
+
+header p{
+  margin-top:25px;
+  max-width:680px;
+  font-size:1.05rem;
+  color:#cbd5f5;
+}
+
+.badges{
+  margin-top:30px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.badge{
+  padding:10px 18px;
+  border:1px solid var(--border);
+  border-radius:50px;
+  font-size:.9rem;
+  background:rgba(15,23,42,.6);
+}
+
+.profile-wrapper{
+  display:flex;
+  justify-content:center;
+}
+
+.profile-card{
+  width:300px;
+  height:300px;
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  box-shadow:0 0 40px rgba(56,189,248,.25);
+}
+
+.profile-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+section{
+  padding:90px 10%;
+}
+
+h3{
+  font-size:2rem;
+  margin-bottom:40px;
+  position:relative;
+}
+
+h3::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-10px;
+  width:70px;
+  height:4px;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  border-radius:10px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#020617;
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:30px;
+}
+
+.card h4{
+  color:var(--accent);
+  margin-bottom:12px;
+}
+
+.card p,
+.card li{
+  color:#cbd5f5;
+  font-size:.95rem;
+}
+
+.highlight{
+  color:var(--accent2);
+  font-weight:600;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.gallery-card{
+  background:#020617;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  transition:.4s;
+}
+
+.gallery-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 0 30px rgba(56,189,248,.25);
+}
+
+.gallery-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.gallery-caption{
+  padding:15px;
+}
+
+.gallery-caption h4{
+  color:var(--accent);
+  font-size:1rem;
+  margin-bottom:6px;
+}
+
+.gallery-caption p{
+  font-size:.9rem;
+  color:#cbd5f5;
+}
+
+/* FOOTER */
+footer{
+  padding:60px 10%;
+  text-align:center;
+  border-top:1px solid var(--border);
+  background:#020617;
+}
+
+footer p{
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+footer a{
+  margin:0 14px;
+}
+
+@media(max-width:900px){
+  header{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding-top:120px;
+  }
+  .badges{
+    justify-content:center;
+  }
+  .profile-wrapper{
+    margin-top:40px;
+  }
+}
+/* =========================
+   MOBILE RESPONSIVE FIXES
+   ========================= */
+@media (max-width: 768px) {
+
+  header {
+    min-height: auto;
+    padding: 60px 6%;
+    gap: 30px;
+  }
+
+  header h1 {
+    font-size: 2.1rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 60px 6%;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  .profile-card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .badges {
+    gap: 8px;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  /* Gallery mobile fix */
+  .gallery {
+    gap: 20px;
+  }
+
+  .gallery-card img {
+    height: 180px;
+  }
+
+  .gallery-caption h4 {
+    font-size: 0.95rem;
+  }
+
+  .gallery-caption p {
+    font-size: 0.85rem;
+  }
+
+  footer {
+    padding: 40px 6%;
+  }
+
+  footer a {
+    display: inline-block;
+    margin: 8px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  .profile-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .gallery-card img {
+    height: 160px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <div>
+    <h1>Suresh Dattha Reddy Alavala</h1>
+    <h2>IT Undergraduate •  Software Development</h2>
+
+    <p>
+      I design and build <span class="highlight">software applications</span> with a strong
+      foundation in <span class="highlight">problem-solving, data structures, and full-stack development</span>.
+    </p>
+
+    <div class="badges">
+      <div class="badge">Java(Core+Advanced)</div>
+      <div class="badge">Python</div>
+      <div class="badge">Data Structures</div>
+      <div class="badge">Web Development</div>
+      <div class="badge">Git & GitHub</div>
+    </div>
+  </div>
+
+  <div class="profile-wrapper">
+    <div class="profile-card">
+      <img src="assets/images/profile.png" alt="Profile Photo">
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+  <h3>Engineering Profile</h3>
+
+  <p>
+    I am an Information Technology student with practical exposure to programming and application development. 
+    I enjoy building functional software solutions and continuously improving my skills through hands-on projects 
+    and problem-solving.
+  </p>
+
+  <p style="margin-top:15px;">
+    My goal is to grow as a computer science professional by building projects that apply strong programming 
+    fundamentals, algorithms, and intelligent decision-making to develop efficient and scalable software systems.
+  </p>
+
+  <p style="margin-top:15px;">
+    I follow a <b>build-first learning ideology</b>, where I learn concepts by building applications and practicing coding. 
+    This approach has improved my understanding, debugging ability, and problem-solving skills.
+  </p>
+
+  <p style="margin-top:15px;">
+    In the future, I aim to work on scalable and production-ready software systems 
+    that transform academic ideas into real-world applications.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h3>Technical Skills</h3>
+  <div class="grid">
+
+    <div class="card">
+      <h4>Programming</h4>
+      <ul>
+        <li>Java (OOP, Advanced)</li>
+        <li>Python</li>
+        <li>C</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Core CS</h4>
+      <ul>
+        <li>Data Structures & Algorithms</li>
+        <li>DBMS & SQL</li>
+        <li>Operating Systems (Basics)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Web Development</h4>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Flutter (Basics)</li>
+        <li>Backend fundamentals</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4>Tools</h4>
+      <ul>
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+        <li>Linux Basics</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h3>Projects</h3>
+  <div class="grid">
+
+    <div class="card">
+      <h4>Smart Menu</h4>
+      <p>Designed and implemented a web-based QR menu system that enables customers to 
+        access restaurant menus through QR codes at their tables.</p>
+    </div>
+
+    <div class="card">
+      <h4>MediBot</h4>
+      <p>Built a healthcare-focused recommendation system that processes disease inputs and outputs 
+        medical suggestions and dietary recommendations to assist users.</p>
+    </div>
+
+    <div class="card">
+      <h4>News App</h4>
+      <p>Developed a Flutter-based news application that displays real-time news across multiple categories 
+        using a clean and responsive UI.</p>
+    </div>
+
+    <div class="card">
+      <h4>Live Complaint</h4>
+      <p>Developed a live complaint application that allows citizens to register and track municipal issues in real time. 
+        During Second Year Summer Internship</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section>
+  <h3>Internships</h3>
+  <div class="grid">
+
+    <div class="card">
+      <h4>Cisco AICTE Virtual Internship in Cyber Security</h4>
+      <a href="assets/certificates/ideathon.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+    <!--<div class="card">
+      <h4>🚀 Innovation Ambassador Training (3 Levels)</h4>
+      <ul>
+        <li><a href="assets/certificates/innovation_level_1.pdf" target="_blank">Level 1</a></li>
+        <li><a href="assets/certificates/innovation_level_2.pdf" target="_blank">Level 2</a></li>
+        <li><a href="assets/certificates/innovation_level_3.pdf" target="_blank">Level 3</a></li>
+      </ul>
+    </div>-->
+
+    <div class="card">
+      <h4>MERN Stack Intern – CSC India</h4>
+      <a href="assets/certificates/robot_first_prize.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Certifications -->
+<section>
+  <h3>Certifications</h3>
+  <div class="grid">
+
+    <div class="card">
+      <h4>Oracle Certified Foundations Associate(Global)</h4>
+      <a href="assets/certificates/ideathon.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+    
+    <div class="card">
+      <h4>Oracle Cerified Generative AI Professional(Global)</h4>
+      <a href="assets/certificates/robot_first_prize.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+    <div class="card">
+      <h4>Introduction to Industry 4.0 and Industrial Internet of Things(NPTL)</h4>
+      <a href="assets/certificates/robot_first_prize.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Achievements/Activities -->
+<section>
+  <h3>Achievements / Activities</h3>
+  <div class="grid">
+
+    <div class="card">
+      <h4>HackIT Hackathon-Special Appreciation</h4>
+      <p>Recognized for innovation and problem-solving during the HackIT Hackathon,
+    where our team developed a practical technology solution under time constraints.</p>
+      <a href="assets/certificates/ideathon.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+    
+    <div class="card">
+      <h4>Student Coordinator–C Programming Bootcamp</h4>
+      <p>
+    Organized and coordinated a C programming bootcamp, assisting in event planning,
+    participant management, and technical session support.
+  </p>
+
+      <a href="assets/certificates/robot_first_prize.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+    <div class="card">
+      <h4>NSS Volunteer–2024 Elections</h4>
+       <p>
+    Served as an NSS volunteer during the 2024 elections, contributing to
+    community coordination, event organization, and public support activities.
+  </p>
+      <a href="assets/certificates/robot_first_prize.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+    <div class="card">
+      <h4>2nd Prize–Essay Writing Competition</h4>
+       <p>
+    Secured second position in an essay writing competition, demonstrating
+    strong analytical thinking, structured writing, and effective communication skills.
+  </p>
+      <a href="assets/certificates/robot_first_prize.pdf" target="_blank">View Certificate →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- GALLERY -->
+<section>
+  <h3>Gallery/Moments</h3>
+  <div class="gallery">
+
+    <div class="gallery-card">
+      <img src="assets/images/ideathon.png">
+      <div class="gallery-caption">
+        <h4>Essay Writing Competition Winning</h4>
+        <p>Recognized for analytical thinking and structured writing skills.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="assets/images/robot_prize.jpg">
+      <div class="gallery-caption">
+        <h4>Community-Centric Innovation with Design ThinkingWorkshop</h4>
+        <p>Participated in a workshop focused on design thinking and problem-solving approaches.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="assets/images/tra.png">
+      <div class="gallery-caption">
+        <h4>HackIT Hackathon</h4>
+        <p>Recognized for innovation and problem-solving during the HackIT event.</p>
+      </div>
+    </div>
+
+    <div class="gallery-card">
+      <img src="assets/images/tra2.png">
+      <div class="gallery-caption">
+        <h4>Seminar on Agile Software Development Model</h4>
+        <p>Delivered a technical presentation explaining Agile methodology and its workflow in software development.</p>
+      </div>
+    </div>
+    
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Let’s build practical engineering solutions</p>
+  <a href="https://github.com/Hrushi2005">GitHub</a>
+  <a href="https://www.linkedin.com/in/hrushi-venkata-trinadh-9a6680289">LinkedIn</a>
+  <a href="mailto:hrushiyalamarthi@gmail.com">Email</a>
+  <p style="margin-top:20px;">© 2025 Dattha Reddy</p>
+</footer>
+
+</body>
+</html>
